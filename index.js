@@ -19,7 +19,7 @@ app.get( '/user/:name', ( req, res ) => {
   let data = {
     user: name,
     img: '/static/ethan.jpg',
-    qr: qr.imageSync( process.env.URL + '/rate/' + name, { type: 'svg' } ),
+    qr: qr.imageSync( 'process.env.URL + '/rate/' + name', { type: 'svg' } ),
     rating: {
       int: '3',
       frac: '00'
