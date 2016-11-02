@@ -1,0 +1,19 @@
+html
+  head
+    title #{user}
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    link(rel="stylesheet",href="/static/app.css")
+  body
+    main.container
+      section.qr !{qr}
+      section.userInfo
+        div.userInfo-inner
+          div.userAvatar
+            img.userAvatar-img(src=img)
+          h1.userInfo-heading #{user}
+          div.userRating
+            span.userRating-int #{rating.int}
+            span.userRating-frac #{rating.frac}
+    script(src="https://code.jquery.com/jquery-1.10.2.min.js")
+    script(src="/socket.io/socket.io.js")
+    script(src="/static/app.js")

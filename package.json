@@ -1,0 +1,21 @@
+{
+  "name": "nosedive",
+  "version": "1.0.0",
+  "description": "Recreation of S3E1 of Black Mirror.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ethanbutler/nosedive.git"
+  },
+  "author": "Ethan Butler",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.18.0",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
+    "qr-image": "^3.1.0",
+    "socket.io": "^1.5.1"
+  }
+}
