@@ -3,7 +3,7 @@ A Node.js implementation of the first episode of Black Mirror's third season, po
 
 ## Getting Started
 
-`npm install` to download dependencies.
+`npm install` to download dependencies, `node index.js` to run – no bells or whistles yet.
 
 Visiting `localhost:3000/user/anything` will open a page with a QR code you can scan (with, say, SnapChat) to open a page where you can rate the dummy user.
 
