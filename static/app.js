@@ -3,7 +3,7 @@ var socket = io()
 $( document ).ready( function(){
 
   var inputs = $( '.rate-input' )
-  var user   = $( '.rate-user' ).attr( 'data-user' )
+  var user   = $( '.rate' ).attr( 'data-user' )
 
   inputs.on( 'click', function(){
     var vote = $( this ).val()
