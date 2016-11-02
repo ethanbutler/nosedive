@@ -13,6 +13,8 @@ A demo is running at http://nosedive.herokuapp.com/user/Ethan.
 
 ## Todo
 
+* Impose a timeout between votes so that my friends who think it's funny to mash the "1" rating will chill out
 * Set up a databse – rn this is just a super hacked-together proof-of-concept
 * Add support for user registration
+* Add ability for security guards to dock you a full point if you get unruly at an airport
 * See what [this](https://github.com/louisondumont/facematch) is about
