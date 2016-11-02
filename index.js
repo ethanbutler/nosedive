@@ -14,6 +14,10 @@ app.use( '/static', express.static( 'static' ) )
 app.use( body.json() )
 app.set( 'view engine', 'pug' )
 
+app.get( '/', ( req, res ) => {
+  res.send('Hello!')
+} )
+
 app.get( '/user/:name', ( req, res ) => {
   let name = req.params.name
   let data = {
