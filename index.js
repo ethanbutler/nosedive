@@ -1,3 +1,5 @@
+"use strict"
+
 require( 'dotenv' ).config()
 require( 'babel-core/register' )( { presets: 'es-2015' } )
 
