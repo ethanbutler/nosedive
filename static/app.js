@@ -2,6 +2,30 @@ var socket = io()
 
 $( document ).ready( function(){
 
+  // handle user registration for homepage
+  var register = $( '#register' )
+  var name     = $( 'input[name="name"]' )
+  var picture  = $( 'input[name="picture"]' )
+
+  register.on( 'submit', function(e){
+    e.preventDefault()
+    var data = {
+      name: name.val(),
+      picture: picture.val()
+    }
+    $.ajax( {
+      method: 'POST',
+      url: '/user/' + data.name,
+      data: JSON.stringify( data ),
+      contentType: 'application/json; charaset="utf-8"'
+    } )
+    .success( function( res ) {
+      console.log( res )
+    })
+  } )
+
+
+  // handle ratins for ratings page
   var inputs = $( '.rate-input' )
   var user   = $( '.rate' ).attr( 'data-user' )
 
@@ -18,6 +42,7 @@ $( document ).ready( function(){
     } )
   } )
 
+  // update rating for user page
   socket.on( 'rating', function( newRating ){
     var rating = newRating.toString().split('.')
     var int = rating[0]

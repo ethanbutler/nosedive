@@ -21,7 +21,7 @@ app.use( body.json() )
 app.set( 'view engine', 'pug' )
 
 app.get( '/', ( req, res ) => {
-  res.send('Hello!')
+  return res.render( __dirname + '/views/index' )
 } )
 
 app.get( '/user/:name', ( req, res ) => {

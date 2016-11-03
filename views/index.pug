@@ -4,16 +4,12 @@ html
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     link(rel="stylesheet",href="/static/app.css")
   body
-    main.container
-      section.rate(data-user=user)
-        div.userAvatar
-          img.userAvatar-img(src=img)
-        form.rate-form
-          -var n = 1
-          while n <= 5
-            div.rate-item
-              input.rate-input(type="radio",name="rating",value=n++)
-              label.rate-label
+    form(id="register")
+      label(for="name") Name
+      input(type="text",name="name",id="name")
+      label(for="picture") Picture
+      input(type="file",name="picture",id="picture",accept="image/jpg")
+      input(type="submit")
     script(src="https://code.jquery.com/jquery-1.10.2.min.js")
     script(src="/socket.io/socket.io.js")
     script(src="/static/app.js")
