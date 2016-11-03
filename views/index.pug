@@ -4,7 +4,7 @@ html
     meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     link(rel="stylesheet",href="/static/app.css")
   body
-    form(id="register")
+    form(id="register",action="/user/",method="POST",enctype="multipart/form-data")
       label(for="name") Name
       input(type="text",name="name",id="name")
       label(for="picture") Picture
