@@ -9,7 +9,7 @@ $( document ).ready( function(){
     var vote = $( this ).val()
     $.ajax( {
       method: 'POST',
-      url: '/user/' + user,
+      url: '/rate/' + user,
       data: JSON.stringify( { vote: vote } ),
       contentType: 'application/json; charset=utf-8'
     } )
