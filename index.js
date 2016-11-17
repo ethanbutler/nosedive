@@ -30,7 +30,7 @@ let upload  = multer( {
 let dbConnection = require( './lib/db' )
 let addUser      = require( './lib/addUser' )
 let addVote      = require( './lib/addVote' )
-let getUser      = require( './lib/getuser' )
+let getUser      = require( './lib/getUser' )
 
 app.get( '/', ( req, res ) => {
   return res.render( __dirname + '/views/index' )
