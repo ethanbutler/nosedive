@@ -82,17 +82,19 @@ app.get( '/rate/:name', (req, res) => {
 io.on( 'connection', socket => {
   let rating = 3
   let count = 1
-  let avgVote = vote => {
-    count++
-    return rating = ( rating * ( count - 1 ) + parseInt( vote ) ) / ( count )
-  }
-  app.post( '/rate/:name', ( req, res ) => {
-    let vote = req.body.vote
-    let newRating = avgVote( vote )
+
+} )
+
+app.post( '/rate/:name', ( req, res ) => {
+  let vote = req.body.vote
+  let name = req.params.name
+  dbConnection( addVote, {
+    name: name,
+    vote: vote
+  }, newRating => {
     io.emit( 'rating', newRating )
     res.status(200).send( 'vote counted' )
   } )
-
 } )
 
 http.listen( process.env.PORT || 3000, () => {
