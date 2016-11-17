@@ -64,9 +64,12 @@ app.post( '/user/', upload.single('picture'), ( req, res ) => {
     name: name,
     curRating: 0,
     numVotes: 0
-  }, ( doesUserExist ) => {
-    let message = doesUserExist ? 'user already exists' : 'user created'
-    res.status(200).send(message)
+  }, ( doesUserExist, name ) => {
+    if( doesUserExist ){
+      return res.status(409).send( 'user already exists' )
+    } else {
+      return res.status(200).send( name )
+    }
   } )
 } )
 
@@ -77,12 +80,6 @@ app.get( '/rate/:name', (req, res) => {
     user: name
   }
   res.render( __dirname + '/views/rate', data )
-} )
-
-io.on( 'connection', socket => {
-  let rating = 3
-  let count = 1
-
 } )
 
 app.post( '/rate/:name', ( req, res ) => {

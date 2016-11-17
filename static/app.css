@@ -141,3 +141,51 @@ body {
 .rate-input:checked + .rate-label:before {
   color: #98EBE7;
 }
+
+.signup {
+  width: 50%;
+  height: 100vh;
+  padding: 0 15px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.signup-form {
+  margin: auto;
+}
+
+.signup .input-group {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.signup label {
+  display: block;
+  font-size: 1.25em;
+  margin-bottom: 5px;
+}
+
+.signup input {
+  background: rgba(255,255,255,.2);
+  transition: background .2s ease, border-width .3s ease;
+  border: none;
+  padding: 10px 5px;
+  font-size: 1.5em;
+  border: 0px solid #98EBE7;
+}
+
+.signup input[type="text"]:focus {
+  outline: none;
+  border-width: 0 0 0 5px;
+  background: rgba(255,255,255,.4);
+}
+
+.signup input[type="submit"] {
+  background: #EEFFFE;
+  font-family: 'Oswald';
+  font-size: 1.1em;
+}
+
+.signup input[type="submit"]:hover {
+  background: #98EBE7;
+}

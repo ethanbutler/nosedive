@@ -18,7 +18,7 @@ $( document ).ready( function(){
       contentType: false
     } )
     .success( function( res ) {
-      console.log( res )
+      window.location = '/user/'+res;
     } );
   } );
 
@@ -44,7 +44,7 @@ $( document ).ready( function(){
   socket.on( 'rating', function( newRating ){
     var rating = newRating.toString().split('.');
     var int = rating[0];
-    var frac = rating[1].substr(0,3);
+    var frac = rating[1] ? rating[1].substr(0,3) : '000';
     $( '.userRating-int' ).text( int );
     $( '.userRating-frac' ).text( frac );
   } )
